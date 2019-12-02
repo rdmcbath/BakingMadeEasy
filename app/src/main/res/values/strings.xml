@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">BakingMadeEasy</string>
+    <string name="no_recipes_found">No recipes found!</string>
+    <string name="no_network">No Network</string>
+    <string name="previous_button">Previous</string>
+    <string name="next_button">Next</string>
+    <string name="steps">Reciple Steps</string>
+    <string name="ingredients_label">Ingredients</string>
+    <string name="recipe_steps_label">Recipe Steps:</string>
+    <string name="no_steps_found">No steps found!</string>
+    <string name="action_bar_ingredient_detail">Ingredients</string>
+    <string name="action_bar_recipe_steps">Recipe Steps and Ingredients</string>
+    <string name="action_bar_step_detail">Step Detail</string>
+    <string name="step">Step</string>
+    <string name="widget_text">No Ingredients to Show</string>
+    <string name="addToWidgetButton">Add To Widget!</string>
+    <string name="widget_ingredients_added">Ingredients Added to Widget!</string>
+</resources>

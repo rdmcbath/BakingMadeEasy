@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/widget_ingredient_item_detail">
+
+    <TextView
+        android:id="@+id/widget_ingredient_label"
+        style="?android:attr/textAppearanceSmall"
+        android:layout_below="@+id/widget_recipe_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textSize="18sp"
+        android:textColor="@color/primary_text"
+        tools:text="Ingredient"/>
+
+    <TextView
+        android:id="@+id/widget_quantity"
+        style="?android:attr/textAppearanceSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_below="@+id/widget_ingredient_label"
+        android:textColor="@color/secondary_text"
+        tools:text="Quantity"/>
+
+    <TextView
+        android:id="@+id/widget_measure"
+        style="?android:attr/textAppearanceSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_below="@+id/widget_ingredient_label"
+        android:layout_toEndOf="@+id/widget_quantity"
+        android:layout_toRightOf="@+id/widget_quantity"
+        android:textColor="@color/secondary_text"
+        tools:text="Measure"/>
+
+</RelativeLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.android.bakingmadeeasy">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".UI.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".UI.RecipeStepDetailActivity"
+            android:parentActivityName="com.example.android.bakingmadeeasy.UI.RecipeStepsActivity"
+            android:label="@string/action_bar_step_detail"
+            android:launchMode="singleTop"
+            android:configChanges="orientation"/>
+
+        <activity android:name=".UI.RecipeStepsActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.example.android.bakingmadeeasy.UI.MainActivity"/>
+
+        <activity android:name=".UI.IngredientDetailActivity"
+            android:label="@string/action_bar_ingredient_detail"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.example.android.bakingmadeeasy.UI.RecipeStepsActivity"/>
+
+        <receiver android:name="android.support.v4.media.session.MediaButtonReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".widget.WidgetProvider"
+            android:label="Ingredients for BakingMadeEasy">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data android:name="android.appwidget.provider"
+                android:resource="@xml/widget_recipe_info" />
+        </receiver>
+        <service
+            android:name=".widget.ListViewWidgetService"
+            android:label="Ingredients for BakingMadeEasy"
+            android:permission="android.permission.BIND_REMOTEVIEWS"/>
+    </application>
+
+</manifest>
